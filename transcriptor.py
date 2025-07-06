@@ -1,6 +1,6 @@
 import whisper
 import os
-import subprocess
+from moviepy.editor import VideoFileClip
 import torch
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -8,19 +8,15 @@ print(f"⚙️ Usando dispositivo: {device}")
 
 def extract_audio(video_path: str, audio_path: str = "temp_audio.wav") -> str | None:
     """
-    Extrae el audio usando ffmpeg y lo guarda como WAV mono a 16kHz.
+    Extrae el audio del video usando moviepy y lo guarda como WAV a 16kHz mono.
     """
-    print("🎬 Extrayendo audio del archivo...")
-    command = [
-        "ffmpeg", "-y", "-i", video_path,
-        "-vn", "-acodec", "pcm_s16le", "-ar", "16000", "-ac", "1", audio_path
-    ]
-
     try:
-        subprocess.run(command, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("🎬 Extrayendo audio del archivo...")
+        video = VideoFileClip(video_path)
+        video.audio.write_audiofile(audio_path, fps=16000, nbytes=2, buffersize=2000, codec='pcm_s16le')
         return audio_path if os.path.exists(audio_path) else None
-    except subprocess.CalledProcessError:
-        print("❌ Error al ejecutar ffmpeg.")
+    except Exception as e:
+        print(f"❌ Error al extraer audio: {e}")
         return None
 
 def transcribe_audio(audio_path: str, model_size: str = "base") -> str:
