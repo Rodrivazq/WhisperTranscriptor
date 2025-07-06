@@ -43,7 +43,14 @@ streamlit run app.py
 
 ### Pantalla principal
 
-![App funcionando](assets/captura1.png)
+![App en reposo](assets/captura1.png)
+
+### Pantalla cargando
+
+![App funcionando](assets/captura2.png)
+
+### Resultado de la transcripción
+![Transcripción](assets/captura3.png)
 
 ## ✨ Créditos
 Desarrollado por Rodrigo Vázquez como proyecto final de la diplomatura en programación con IA.
