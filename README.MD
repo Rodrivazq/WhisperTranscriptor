@@ -20,14 +20,16 @@ Esta app permite transcribir automáticamente el contenido de archivos de audio 
 ## 📦 Instalación
 
 1. Clonar el repositorio:
+<pre>
 ```bash
-git clone https://github.com/tu-usuario/WhisperTranscriptor.git
+git clone https://github.com/Rodrivazq/WhisperTranscriptor.git
 cd WhisperTranscriptor
+</pre>
 
 2. Crear entorno virtual:
 
 python -m venv .venv
-.venv\Scripts\activate  # En Windows
+.venv\Scripts\Activate.ps1  # En Windows, terminal powershell
 
 3. Instalar dependencias:
 
@@ -36,7 +38,12 @@ pip install -r requirements.txt
 4. Ejecutar la app:
 
 streamlit run app.py
-📸 Captura de pantalla
+
+## 📸 Capturas de pantalla
+
+### Pantalla principal
+
+![App funcionando](assets/captura1.png)
 
 ## ✨ Créditos
 Desarrollado por Rodrigo Vázquez como proyecto final de la diplomatura en programación con IA.
