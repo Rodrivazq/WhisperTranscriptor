@@ -52,7 +52,6 @@ if uploaded_file is not None:
             except Exception as e:
                 st.error(f"❌ Error al transcribir el audio: {e}")
 
-            # Limpieza
             if os.path.exists(audio_path):
                 os.remove(audio_path)
         else:
