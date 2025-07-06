@@ -10,7 +10,7 @@ Esta app permite transcribir automáticamente el contenido de archivos de audio 
 - Descarga del texto generado
 - Interfaz simple con Streamlit
 
-🔗 Versión Online
+## 🔗 Versión Online
 Podés probar la app directamente en Streamlit Cloud: 
 👉 [Probar el Transcriptor de Audio en Línea](https://whispertranscriptorgit-yxwdgav3nwmnucdo2jwag7.streamlit.app/)
 
