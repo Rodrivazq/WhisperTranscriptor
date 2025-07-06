@@ -10,6 +10,15 @@ Esta app permite transcribir automáticamente el contenido de archivos de audio 
 - Descarga del texto generado
 - Interfaz simple con Streamlit
 
+🔗 Versión Online
+Podés probar la app directamente en Streamlit Cloud: 
+👉 [Probar el Transcriptor de Audio en Línea](https://whispertranscriptorgit-yxwdgav3nwmnucdo2jwag7.streamlit.app/)
+
+### ⚠️ Nota Importante:
+- Para usar la corrección automática con LanguageTool, es necesario instalar Java.
+- En Streamlit Cloud, LanguageTool no está disponible por defecto.
+
+
 ## 🛠️ Requisitos
 
 - Python 3.10+
